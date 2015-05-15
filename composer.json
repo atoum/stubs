@@ -1,0 +1,27 @@
+{
+	"name": "atoum/stubs",
+	"type": "library",
+	"description": "Stubs for atoum, the simple modern and intuitive unit testing framework for PHP 5.3+",
+	"keywords": ["TDD","atoum","test","unit testing"],
+	"homepage": "http://www.atoum.org",
+	"license": "BSD",
+	"authors":
+	[
+		{
+			"name": "Julien Bianchi",
+			"email": "julien.bianchi@atoum.org"
+		},
+		{
+			"name": "Ludovic Fleury",
+			"email": "ludovic.fleury@atoum.org"
+		}
+	],
+	"suggest": {
+		"atoum/atoum": "Include atoum in your projet dependencies"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "2.x-dev"
+		}
+	}
+}
