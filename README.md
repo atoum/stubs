@@ -43,3 +43,26 @@ atoum provides 3 aliases for the main test class, choose the one you prefer:
 Once done, you will get full featured code-completion:
 
 ![atoum-stubs](demo.gif)
+
+## Why?
+
+> Why are the PHPdoc annotations part of an external repository?
+
+Because we just don't want them in the middle of atoum's source code. It's not really useful there and it adds extra
+noise.
+
+Moreover, if we use PHPDoc for the userland API we should also add annotations to every method of the internal API. Too
+much work for a small amount of added value.
+
+> Why are those annotations only working on atoum aliases?
+
+Because we stored annotated code in an external repository, we would have to duplicate some classes to annotate them.
+Doing so would create duplicate classes and some IDEs will emit warnings.
+
+We don't want to add extra noise while providing a good code-completion.
+
+> Why not annotating every public method?
+
+Because they are not all meaningful in a test context. When you write unit tests with atoum, you will likely never call
+internal asserters' methods, even if they are public. They provide support for atoum so it can do its job well. But they
+won't help you in your everyday work.
