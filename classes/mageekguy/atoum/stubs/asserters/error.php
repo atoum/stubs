@@ -35,14 +35,14 @@ class error
     /**
      * @link http://docs.atoum.org/en/latest/asserters.html#exists
      *
-     * return $this
+     * @return $this
      */
     public function exists() {}
 
     /**
      * @link http://docs.atoum.org/en/latest/asserters.html#notexists
      *
-     * return $this
+     * @return $this
      */
     public function notExists() {}
 
@@ -51,12 +51,12 @@ class error
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#withtype
      *
-     * return $this
+     * @return $this
      */
     public function withType($type) {}
 
     /**
-     * return $this
+     * @return $this
      */
     public function withAnyType() {}
 
