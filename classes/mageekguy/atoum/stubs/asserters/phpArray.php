@@ -11,17 +11,23 @@ class phpArray extends variable implements \arrayAccess
 {
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isempty
      */
     public $isEmpty;
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnotempty
      */
     public $isNotEmpty;
 
     /**
      * @param integer $size
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hassize
      *
      * @return $this
      */
@@ -30,12 +36,16 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isempty
+     *
      * @return $this
      */
     public function isEmpty($failMessage = null) {}
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnotempty
      *
      * @return $this
      */
@@ -45,6 +55,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed  $value
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#strictlycontains
+     *
      * @return $this
      */
     public function strictlyContains($value, $failMessage = null) {}
@@ -52,6 +64,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed  $value
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#contains
      *
      * @return $this
      */
@@ -61,6 +75,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed  $value
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#strictlynotcontains
+     *
      * @return $this
      */
     public function strictlyNotContains($value, $failMessage = null) {}
@@ -68,6 +84,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed  $value
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#notcontains
      *
      * @return $this
      */
@@ -77,6 +95,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed[] $keys
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#haskeys
+     *
      * @return $this
      */
     public function hasKeys(array $keys, $failMessage = null) {}
@@ -84,6 +104,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed[] $keys
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#nothaskeys
      *
      * @return $this
      */
@@ -93,6 +115,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed  $key
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#haskey
+     *
      * @return $this
      */
     public function hasKey($key, $failMessage = null) {}
@@ -100,6 +124,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed  $key
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#nothaskeys
      *
      * @return $this
      */
@@ -109,6 +135,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed[] $values
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#containsvalues
+     *
      * @return $this
      */
     public function containsValues(array $values, $failMessage = null) {}
@@ -116,6 +144,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed[] $values
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#strictlycontainsvalues
      *
      * @return $this
      */
@@ -125,6 +155,8 @@ class phpArray extends variable implements \arrayAccess
      * @param mixed[] $values
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#notcontainsvalues
+     *
      * @return $this
      */
     public function notContainsValues(array $values, $failMessage = null) {}
@@ -132,6 +164,8 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed[] $values
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#strictlynotcontainsvalues
      *
      * @return $this
      */

@@ -28,12 +28,16 @@ trait asserters
     /**
      * @param bool $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#boolean
+     *
      * @return asserters\boolean
      */
     public function boolean($value) {}
 
     /**
      * @param mixed $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#casttostring
      *
      * @return asserters\castToString
      */
@@ -49,12 +53,16 @@ trait asserters
     /**
      * @param \dateInterval $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#dateinterval
+     *
      * @return asserters\dateInterval
      */
     public function dateInterval(\dateInterval $value) {}
 
     /**
      * @param \dateTime $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#datetime
      *
      * @return asserters\dateTime
      */
@@ -64,12 +72,16 @@ trait asserters
      * @param string  $message
      * @param integer $type
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#error
+     *
      * @return asserters\error
      */
     public function error($message = null, $type = null) {}
 
     /**
      * @param \exception|callable $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#exception
      *
      * @return asserters\exception
      */
@@ -85,12 +97,16 @@ trait asserters
     /**
      * @param string $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hash
+     *
      * @return asserters\hash
      */
     public function hash($value) {}
 
     /**
      * @param integer $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#integer
      *
      * @return asserters\integer
      */
@@ -99,6 +115,8 @@ trait asserters
     /**
      * @param atoum\mock\aggregator $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#mock
+     *
      * @return asserters\mock
      */
     public function mock($value) {}
@@ -106,12 +124,16 @@ trait asserters
     /**
      * @param string $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#mysqldatetime
+     *
      * @return asserters\mysqlDateTime
      */
     public function mysqlDateTime($value) {}
 
     /**
      * @param object $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#object
      *
      * @return asserters\object
      */
@@ -122,12 +144,16 @@ trait asserters
      * @param string  $charlist
      * @param boolean $checkType
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#output
+     *
      * @return asserters\output
      */
     public function output($value = null, $charlist = null, $checkType = true) {}
 
     /**
      * @param array $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#array
      *
      * @return asserters\phpArray
      */
@@ -136,12 +162,16 @@ trait asserters
     /**
      * @param string $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#class
+     *
      * @return asserters\phpClass
      */
     public function phpClass($value) {}
 
     /**
      * @param float $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#float
      *
      * @return asserters\phpfloat
      */
@@ -155,6 +185,8 @@ trait asserters
     /**
      * @param string $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string
+     *
      * @return asserters\phpString
      */
     public function phpString($value) {}
@@ -162,11 +194,15 @@ trait asserters
     /**
      * @param mixed $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#sizeof
+     *
      * @return asserters\sizeOf
      */
     public function sizeOf($value) {}
 
     /**
+     * @link http://docs.atoum.org/en/latest/asserters.html#stream
+     *
      * @return asserters\stream
      */
     public function stream($value) {}
@@ -174,12 +210,16 @@ trait asserters
     /**
      * @param string $value
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#utf8string
+     *
      * @return asserters\utf8String
      */
     public function utf8String($value) {}
 
     /**
      * @param mixed $value
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable
      *
      * @return asserters\variable
      */

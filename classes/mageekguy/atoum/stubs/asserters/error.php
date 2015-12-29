@@ -10,11 +10,15 @@ class error
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#exists
      */
     public $exists;
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#notexists
      */
     public $notExists;
 
@@ -29,17 +33,23 @@ class error
     public $withAnyMessage;
 
     /**
+     * @link http://docs.atoum.org/en/latest/asserters.html#exists
+     *
      * return $this
      */
     public function exists() {}
 
     /**
+     * @link http://docs.atoum.org/en/latest/asserters.html#notexists
+     *
      * return $this
      */
     public function notExists() {}
 
     /**
      * @param integer $type
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#withtype
      *
      * return $this
      */

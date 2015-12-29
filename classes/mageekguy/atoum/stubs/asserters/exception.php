@@ -7,11 +7,15 @@ class exception extends object
 {
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasdefaultcode
      */
     public $hasDefaultCode;
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasdefaultcode
      *
      * @return $this
      */
@@ -21,6 +25,8 @@ class exception extends object
      * @param integer $code
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hascode
+     *
      * @return $this
      */
     public function hasCode($code, $failMessage = null) {}
@@ -29,6 +35,8 @@ class exception extends object
      * @param string $message
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasmessage
+     *
      * @return $this
      */
     public function hasMessage($message, $failMessage = null) {}
@@ -36,6 +44,8 @@ class exception extends object
     /**
      * @param \exception $exception
      * @param string     $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasnestedexception
      *
      * @return $this
      */
