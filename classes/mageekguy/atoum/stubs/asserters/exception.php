@@ -13,6 +13,11 @@ class exception extends object
     public $hasDefaultCode;
 
     /**
+     * @var phpString
+     */
+    public $message;
+
+    /**
      * @param string $failMessage
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#hasdefaultcode
