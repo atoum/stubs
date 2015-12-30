@@ -9,6 +9,8 @@ class object extends variable
      * @param string $value
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#object-is-instance-of
+     *
      * @return $this
      */
     public function isInstanceOf($value, $failMessage = null) {}
@@ -25,6 +27,8 @@ class object extends variable
      * @param integer $size
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#object-has-size
+     *
      * @return $this
      */
     public function hasSize($size, $failMessage = null) {}
@@ -33,12 +37,16 @@ class object extends variable
      * @param object $object
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#object-is-clone-of
+     *
      * @return $this
      */
     public function isCloneOf($object, $failMessage = null) {}
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#object-is-empty
      *
      * @return $this
      */

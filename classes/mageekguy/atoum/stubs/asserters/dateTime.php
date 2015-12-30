@@ -9,6 +9,8 @@ class dateTime extends object
      * @param \dateTimezone $timezone
      * @param string         $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hastimezone
+     *
      * @return $this
      */
     public function hasTimezone(\dateTimezone $timezone, $failMessage = null) {}
@@ -16,6 +18,8 @@ class dateTime extends object
     /**
      * @param integer $year
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasyear
      *
      * @return $this
      */
@@ -25,6 +29,8 @@ class dateTime extends object
      * @param integer $month
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasmonth
+     *
      * @return $this
      */
     public function hasMonth($month, $failMessage = null) {}
@@ -32,6 +38,8 @@ class dateTime extends object
     /**
      * @param integer $day
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasday
      *
      * @return $this
      */
@@ -43,6 +51,8 @@ class dateTime extends object
      * @param integer $day
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasdate
+     *
      * @return $this
      */
     public function hasDate($year, $month, $day, $failMessage = null) {}
@@ -50,6 +60,8 @@ class dateTime extends object
     /**
      * @param integer $hours
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hashours
      *
      * @return $this
      */
@@ -59,6 +71,8 @@ class dateTime extends object
      * @param integer $minutes
      * @param string  $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasminutes
+     *
      * @return $this
      */
     public function hasMinutes($minutes, $failMessage = null) {}
@@ -66,6 +80,8 @@ class dateTime extends object
     /**
      * @param integer $seconds
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasseconds
      *
      * @return $this
      */
@@ -76,6 +92,8 @@ class dateTime extends object
      * @param integer $minutes
      * @param integer $seconds
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hastime
      *
      * @return $this
      */
@@ -89,6 +107,8 @@ class dateTime extends object
      * @param integer $minutes
      * @param integer $seconds
      * @param string  $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#hasdateandtime
      *
      * @return $this
      */

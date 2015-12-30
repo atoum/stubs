@@ -15,6 +15,8 @@ class variable
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnotnull
      */
     public $isNotNull;
 
@@ -25,12 +27,16 @@ class variable
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnull
      */
     public $isNull;
 
     /**
      * @param mixed  $value
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-equal-to
      *
      * @return $this
      */
@@ -40,6 +46,8 @@ class variable
      * @param mixed  $value
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-not-equal-to
+     *
      * @return $this
      */
     public function isNotEqualTo($value, $failMessage = null) {}
@@ -47,6 +55,8 @@ class variable
     /**
      * @param mixed  $value
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-identical-to
      *
      * @return $this
      */
@@ -56,6 +66,8 @@ class variable
      * @param mixed  $value
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-not-identical-to
+     *
      * @return $this
      */
     public function isNotIdenticalTo($value, $failMessage = null) {}
@@ -63,12 +75,16 @@ class variable
     /**
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnull
+     *
      * @return $this
      */
     public function isNull($failMessage = null) {}
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isnotnull
      *
      * @return $this
      */
@@ -100,6 +116,8 @@ class variable
      * @param callable $value
      * @param string   $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-callable
+     *
      * @return $this
      */
     public function isCallable(callable $value, $failMessage = null) {}
@@ -107,6 +125,8 @@ class variable
     /**
      * @param callable $value
      * @param string   $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#variable-is-not-callable
      *
      * @return $this
      */

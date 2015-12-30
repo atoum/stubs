@@ -11,6 +11,8 @@ class stream
     /**
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isread
+     *
      * @return $this
      */
     public function isRead($failMessage = null) {}

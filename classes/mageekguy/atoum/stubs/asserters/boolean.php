@@ -7,16 +7,22 @@ class boolean extends variable
 {
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isfalse
      */
     public $isFalse;
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#istrue
      */
     public $isTrue;
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#istrue
      *
      * @return $this
      */
@@ -24,6 +30,8 @@ class boolean extends variable
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#isfalse
      *
      * @return $this
      */

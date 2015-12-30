@@ -15,12 +15,16 @@ class mock extends adapter
     /**
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#wascalled
+     *
      * @return $this
      */
     public function wasCalled($failMessage = null) {}
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#wasnotcalled
      *
      * @return $this
      */

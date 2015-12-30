@@ -7,21 +7,29 @@ class phpString extends variable
 {
     /**
      * @var \mageekguy\atoum\stubs\asserters\integer
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#length
      */
     public $length;
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-is-empty
      */
     public $isEmpty;
 
     /**
      * @var static
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-is-not-empty
      */
     public $isNotEmpty;
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-is-empty
      *
      * @return $this
      */
@@ -29,6 +37,8 @@ class phpString extends variable
 
     /**
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-is-not-empty
      *
      * @return $this
      */
@@ -46,6 +56,8 @@ class phpString extends variable
      * @param string $pattern
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-matches
+     *
      * @return $this
      */
     public function matches($pattern, $failMessage = null) {}
@@ -53,6 +65,8 @@ class phpString extends variable
     /**
      * @param string $path
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-is-equal-to-contents-of-file
      *
      * @return $this
      */
@@ -62,6 +76,8 @@ class phpString extends variable
      * @param integer $length
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-has-length
+     *
      * @return $this
      */
     public function hasLength($length, $failMessage = null) {}
@@ -69,6 +85,8 @@ class phpString extends variable
     /**
      * @param integer $length
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-has-length-greater-than
      *
      * @return $this
      */
@@ -78,6 +96,8 @@ class phpString extends variable
      * @param integer $length
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-has-length-less-than
+     *
      * @return $this
      */
     public function hasLengthLessThan($length, $failMessage = null) {}
@@ -86,6 +106,8 @@ class phpString extends variable
      * @param string $fragment
      * @param string $failMessage
      *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-contains
+     *
      * @return $this
      */
     public function contains($fragment, $failMessage = null) {}
@@ -93,6 +115,8 @@ class phpString extends variable
     /**
      * @param string $fragment
      * @param string $failMessage
+     *
+     * @link http://docs.atoum.org/en/latest/asserters.html#string-not-contains
      *
      * @return $this
      */
