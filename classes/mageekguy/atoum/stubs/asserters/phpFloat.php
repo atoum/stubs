@@ -11,6 +11,8 @@ class phpFloat extends integer
      * @param string $failMessage
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#isnearlyequalto
+     *
+     * @return $this
      */
     public function isNearlyEqualTo($value, $epsilon = null, $failMessage = null) {}
 }
