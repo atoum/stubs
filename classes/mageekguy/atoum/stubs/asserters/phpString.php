@@ -27,6 +27,11 @@ class phpString extends variable
     public $isNotEmpty;
 
     /**
+     * @var castToArray
+     */
+    public $toArray;
+
+    /**
      * @param string $failMessage
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#string-is-empty
@@ -153,4 +158,9 @@ class phpString extends variable
      * @return $this
      */
     public function notEndWith($fragment, $failMessage = null) {}
+
+    /**
+     * @return castToArray
+     */
+    public function toArray() {}
 }

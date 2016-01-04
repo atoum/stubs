@@ -19,7 +19,7 @@ use
  */
 class atoum extends mageekguy\atoum\test
 {
-    use stubs\asserters
+    use stubs\asserters;
 
     /**
      * @var static

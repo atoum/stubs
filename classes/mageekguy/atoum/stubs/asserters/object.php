@@ -6,6 +6,11 @@ namespace mageekguy\atoum\stubs\asserters;
 class object extends variable
 {
     /**
+     * @var castToArray
+     */
+    public $toArray;
+
+    /**
      * @param string $value
      * @param string $failMessage
      *
@@ -77,4 +82,9 @@ class object extends variable
      * @return castToString
      */
     public function toString() {}
+
+    /**
+     * @return castToArray
+     */
+    public function toArray() {}
 }

@@ -46,6 +46,13 @@ trait asserters
     /**
      * @param mixed $value
      *
+     * @return asserters\castToArray
+     */
+    public function castToArray($value) {}
+
+    /**
+     * @param mixed $value
+     *
      * @return asserters\constant
      */
     public function constant($value) {}
