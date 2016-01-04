@@ -238,4 +238,11 @@ trait asserters
      * @return asserters\iterator
      */
     public function iterator(\iterator $value) {}
+
+    /**
+     * @param resource $value
+     *
+     * @return asserters\phpResource
+     */
+    public function phpResource($value) {}
 }
