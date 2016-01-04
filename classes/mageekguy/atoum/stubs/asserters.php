@@ -231,4 +231,11 @@ trait asserters
      * @return asserters\variable
      */
     public function variable($value) {}
+
+    /**
+     * @param \iterator $value
+     *
+     * @return asserters\iterator
+     */
+    public function iterator(\iterator $value) {}
 }
