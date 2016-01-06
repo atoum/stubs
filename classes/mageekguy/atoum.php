@@ -210,11 +210,20 @@ class atoum extends mageekguy\atoum\test
      */
     public function when($mixed) {}
 
-
     /**
      * @param test\adapter $adapter
      *
      * @return asserters\adapter
      */
     public function adapter(test\adapter $adapter) {}
+
+    /**
+     * @param string $class
+     * @param string $mockNamespace
+     * @param string $mockClass
+     * @param array  $constructorArguments
+     *
+     * @return object
+     */
+    public function newMockInstance($class, $mockNamespace = null, $mockClass = null, array $constructorArguments = null) {}
 }
