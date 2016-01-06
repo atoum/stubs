@@ -6,6 +6,11 @@ namespace mageekguy\atoum\stubs\asserters;
 class dateTime extends object
 {
     /**
+     * @var static
+     */
+    public $isImmutable;
+
+    /**
      * @param \dateTimezone $timezone
      * @param string         $failMessage
      *
@@ -113,4 +118,11 @@ class dateTime extends object
      * @return $this
      */
     public function hasDateAndTime($year, $month, $day, $hours, $minutes, $seconds, $failMessage = null) {}
+
+    /**
+     * @param string $failMessage
+     *
+     * @return $this
+     */
+    public function isImmutable($failMessage = null) {}
 }

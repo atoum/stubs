@@ -67,7 +67,7 @@ trait asserters
     public function dateInterval(\dateInterval $value) {}
 
     /**
-     * @param \dateTime $value
+     * @param \dateTime|\dateTimeInterface $value
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#datetime
      *
