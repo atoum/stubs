@@ -69,4 +69,4 @@ won't help you in your everyday work.
 
 ## License
 
-atoum stubs is released under the BSD-3-Clause License. See the bundled LICENSE file for details.
+atoum stubs are released under the BSD-3-Clause License. See the bundled LICENSE file for details.
