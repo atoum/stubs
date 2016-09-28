@@ -66,3 +66,7 @@ We don't want to add extra noise while providing a good code-completion.
 Because they are not all meaningful in a test context. When you write unit tests with atoum, you will likely never call
 internal asserters' methods, even if they are public. They provide support for atoum so it can do its job well. But they
 won't help you in your everyday work.
+
+## Licence
+
+stubs is released under the BSD-3-Clause License. See the bundled LICENSE file for details.
