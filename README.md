@@ -1,6 +1,6 @@
 # atoum stubs
 
-![atoum](http://downloads.atoum.org/images/logo.png)
+![atoum](http://atoum.org/images/logo/atoum.png)
 
 ## Install it
 
