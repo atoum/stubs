@@ -67,6 +67,13 @@ Because they are not all meaningful in a test context. When you write unit tests
 internal asserters' methods, even if they are public. They provide support for atoum so it can do its job well. But they
 won't help you in your everyday work.
 
+## Upgrade stubs
+
+```
+bin/updateMissingStubClasses
+bin/updateDoc
+```
+
 ## License
 
 atoum stubs are released under the BSD-3-Clause License. See the bundled LICENSE file for details.
