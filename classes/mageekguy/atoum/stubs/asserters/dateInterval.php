@@ -3,9 +3,9 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * It's the assertion dedicated to the object DateInterval.
+ * It's the assertion dedicated to DateInterval object.
  *
- * If you try to test a value that's not a "DateInterval" (or a child
+ * If you try to test a value that is not a "DateInterval" (or a child
  * class) with this assertion it will fail.
  *
  */
@@ -13,7 +13,7 @@ class dateInterval extends object
 {
     /**
      * "isGreaterThan" checks that the duration of the object  "DateInterval"
-     * is longer to the duration of the given "DateInterval" object.
+     * is higher to the duration of the given "DateInterval" object.
      *
      *    <?php
      *    $di = new DateInterval('P2D');
@@ -39,7 +39,7 @@ class dateInterval extends object
 
     /**
      * "isGreaterThanOrEqualTo" checks that the duration of the object
-     * "DateInterval" is longer or equals to the duration of another object
+     * "DateInterval" is higher or equals to the duration of another object
      * "DateInterval".
      *
      *    <?php
@@ -69,7 +69,7 @@ class dateInterval extends object
 
     /**
      * "isLessThan" checks that the duration of the object  "DateInterval" is
-     * shorter than the duration of the given "DateInterval" object.
+     * lower than the duration of the given "DateInterval" object.
      *
      *    <?php
      *    $di = new DateInterval('P1D');
@@ -95,7 +95,7 @@ class dateInterval extends object
 
     /**
      * "isLessThanOrEqualTo" checks that the duration of the object
-     * "DateInterval" is shorter or equals to the duration of another object
+     * "DateInterval" is lower or equals to the duration of another object
      * "DateInterval".
      *
      *    <?php

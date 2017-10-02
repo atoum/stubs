@@ -3,7 +3,7 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * This is the asserter for mocks.
+ * It's the assertion dedicated to mocks.
  *
  *    <?php
  *    $mock = new \mock\MyClass;
@@ -12,13 +12,30 @@ namespace mageekguy\atoum\stubs\asserters;
  *        ->mock($mock)
  *    ;
  *
- * Note: Refer to the documentation on *mock* for more information on
- *   how to create and manage mocks.
+ * Note: Refer to the documentation of mock for more information on how
+ *   to create and manage mocks.
  *
  */
 class mock extends adapter
 {
     /**
+     * It's an alias of call.
+     *
+     *    <?php
+     *    $this
+     *        ->given(
+     *            $connection = new mock\connection
+     *        )
+     *        ->if(
+     *            $this->newTestedInstance($connection)
+     *        )
+     *        ->then
+     *            ->object($this->testedInstance->noMoreValue())->isTestedInstance
+     *            ->mock($connection)->receive('newPacket')->withArguments(new packet)->once;
+     *
+     *       // same as
+     *       $this->mock($connection)->call('newPacket')->withArguments(new packet)->once;
+     *
      * @param string $function
      *
      * @return $this

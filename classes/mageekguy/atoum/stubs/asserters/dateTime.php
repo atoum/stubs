@@ -3,9 +3,9 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * It's the assertion dedicated to the object DateTime.
+ * It's the assertion dedicated to DateTime  object.
  *
- * If you try to test a value that's not a "DateTime" (or a child class)
+ * If you try to test a value that is not a "DateTime" (or a child class)
  * with this assertion it will fail.
  *
  */
@@ -17,7 +17,7 @@ class dateTime extends object
     public $isImmutable;
 
     /**
-     * "hasTimezone" checks the timezone of the "DateTime" object.
+     * "hasTimezone" checks timezone part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime();
@@ -37,7 +37,7 @@ class dateTime extends object
     public function hasTimezone(\dateTimezone $timezone, $failMessage = null) {}
 
     /**
-     * "hasYear" checks the year of the "DateTime" object.
+     * "hasYear" checks year part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('1981-02-13');
@@ -57,7 +57,7 @@ class dateTime extends object
     public function hasYear($year, $failMessage = null) {}
 
     /**
-     * "hasMonth" checks the month part of objet "DateTime".
+     * "hasMonth" checks month part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('1981-02-13');
@@ -77,7 +77,7 @@ class dateTime extends object
     public function hasMonth($month, $failMessage = null) {}
 
     /**
-     * "hasDay" checks the day of the "DateTime" object.
+     * "hasDay" checks day part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('1981-02-13');
@@ -97,7 +97,7 @@ class dateTime extends object
     public function hasDay($day, $failMessage = null) {}
 
     /**
-     * "hasDate" checks the date part of object "DateTime".
+     * "hasDate" checks the date part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('1981-02-13');
@@ -121,7 +121,7 @@ class dateTime extends object
     public function hasDate($year, $month, $day, $failMessage = null) {}
 
     /**
-     * "hasHours" checks the time of the objet "DateTime".
+     * "hasHours" checks time part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('01:02:03');
@@ -143,7 +143,7 @@ class dateTime extends object
     public function hasHours($hours, $failMessage = null) {}
 
     /**
-     * "hasMinutes" checks the minutes part of the objet "DateTime".
+     * "hasMinutes" checks minutes part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('01:02:03');
@@ -165,7 +165,7 @@ class dateTime extends object
     public function hasMinutes($minutes, $failMessage = null) {}
 
     /**
-     * "hasSeconds" checks the seconds of the "DateTime" object.
+     * "hasSeconds" checks seconds part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('01:02:03');
@@ -187,7 +187,7 @@ class dateTime extends object
     public function hasSeconds($seconds, $failMessage = null) {}
 
     /**
-     * "hasTime" checks the time part of the objet "DateTime"
+     * "hasTime" checks time part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('01:02:03');
@@ -211,7 +211,7 @@ class dateTime extends object
     public function hasTime($hours, $minutes, $seconds, $failMessage = null) {}
 
     /**
-     * "hasDateAndTime" checks the date and the hour of the objet "DateTime"
+     * "hasDateAndTime" checks date and hour part of the "DateTime" object.
      *
      *    <?php
      *    $dt = new DateTime('1981-02-13 01:02:03');

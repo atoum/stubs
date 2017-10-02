@@ -45,8 +45,8 @@ foreach ($iterator as $file)
 // build missing classes
 foreach ($missing as $missingAsserterClass)
 {
-	$path = createNewStubClass($missingAsserterClass, 'mageekguy\\atoum\\stubs\\asserters');
-	echo 'Edit file at "', $path, '". Don\' forget to update src/asserters.php', PHP_EOL;
+	$path = createNewStubClass(str_replace('.php', '', $missingAsserterClass), 'mageekguy\\atoum\\stubs\\asserters');
+	echo 'Edit file at "', $path, '". Don\'t forget to update src/asserters.php', PHP_EOL;
 }
 
 echo 'Ended \o/';

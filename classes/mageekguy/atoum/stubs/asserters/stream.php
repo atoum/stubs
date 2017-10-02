@@ -2,10 +2,9 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
 /**
- * This is the assertion dedicated to the streams.
+ * It's the assertion dedicated to the ´streams
+ * <http://php.net/intro.stream>´_.
  *
  * It's based on atoum virtual filesystem (VFS). A new stream wrapper
  * will be registered (starting with "atoum://").
@@ -15,14 +14,12 @@ use mageekguy\atoum\stubs\asserters;
  * (something like "atoum://mockUniqId").
  *
  */
-class stream
+class stream extends asserter
 {
-    use asserters;
-
     /**
      * "isRead" checks if a mocked stream has been read.
      *
-     *    <?
+     *    <?php
      *    $this
      *        ->given(
      *            $streamController = \atoum\mock\stream::get(),
@@ -30,7 +27,7 @@ class stream
      *        )
      *        ->if(file_get_contents($streamController->getPath()))
      *        ->stream($streamController)
-     *            ->isRead() // passes
+     *            ->isRead() // passe
      *    ;
      *
      *    $this
@@ -38,7 +35,7 @@ class stream
      *            $streamController = \atoum\mock\stream::get(),
      *            $streamController->file_get_contents = 'myFakeContent'
      *        )
-     *        ->if() //we do nothing
+     *        ->if() // we do nothing
      *        ->stream($streamController)
      *            ->isRead() // fails
      *    ;
@@ -52,9 +49,8 @@ class stream
     public function isRead($failMessage = null) {}
 
     /**
-     * "isWrited" is an alias to the isWritten method.
-     *    For more information, refer to the documentation of
-     *    *stream::isWritten*
+     * Hint: "isWrited" is an alias to the "isWritten" method. For more
+     *   information, refer to the documentation of stream::isWritten
      *
      * @param string $failMessage
      *
@@ -65,7 +61,7 @@ class stream
     /**
      * "isWritten" checks if a mocked stream has been written.
      *
-     *    <?
+     *    <?php
      *    $this
      *        ->given(
      *            $streamController = \atoum\mock\stream::get(),
@@ -81,7 +77,7 @@ class stream
      *         $streamController = \atoum\mock\stream::get(),
      *         $streamController->file_put_contents = strlen($content = 'myTestContent')
      *       )
-     *       ->if() //we do nothing
+     *       ->if() // we do nothing
      *       ->stream($streamController)
      *          ->isWritten() // fails
      *    ;

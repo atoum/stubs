@@ -5,11 +5,14 @@ namespace mageekguy\atoum\stubs;
 use mageekguy\atoum;
 
 /**
- * @method asserters\output array(array $value)
+ * @method asserters\phpArray array(array $value)
  * @method asserters\phpClass class($value)
  * @method asserters\phpFloat float($value)
+ * @method asserters\phpFloat double($value)
  * @method asserters\phpFunction function($value)
  * @method asserters\phpString string($value)
+ * @method asserters\phpObject object($value)
+ * @method asserters\phpResource resource($value)
  */
 trait asserters
 {
@@ -94,12 +97,19 @@ trait asserters
      */
     public function exception($value) {}
 
-    /**
-     * @param string $value
-     *
-     * @return asserters\extension
-     */
-    public function extension($value) {}
+	/**
+	 * @param string $value
+	 *
+	 * @return asserters\extension
+	 */
+	public function extension($value) {}
+
+	/**
+	 * @param string $value
+	 *
+	 * @return asserters\generator
+	 */
+	public function generator($value) {}
 
     /**
      * @param string $value
@@ -142,9 +152,9 @@ trait asserters
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#object
      *
-     * @return asserters\object
+     * @return asserters\phpObject
      */
-    public function object($value) {}
+    public function phpObject($value) {}
 
     /**
      * @param string  $value
@@ -180,9 +190,9 @@ trait asserters
      *
      * @link http://docs.atoum.org/en/latest/asserters.html#float
      *
-     * @return asserters\phpfloat
+     * @return asserters\phpFloat
      */
-    public function phpfloat($value) {}
+    public function phpFloat($value) {}
 
     /**
      * @return asserters\phpFunction

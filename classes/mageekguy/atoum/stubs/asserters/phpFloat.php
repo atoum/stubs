@@ -6,7 +6,7 @@ namespace mageekguy\atoum\stubs\asserters;
  * It's the assertion dedicated to decimal numbers.
  *
  * If you try to test a variable that is not a decimal number with this
- * assertion, this will fail.
+ * assertion, it will fail.
  *
  * Note: "null" is not a decimal number. Refer to the PHP manual to
  *   know what is_float considered or not as a float.
@@ -15,8 +15,8 @@ namespace mageekguy\atoum\stubs\asserters;
 class phpFloat extends integer
 {
     /**
-     * "isNearlyEqualTo" checks that the float is approximatively equal to
-     * the value it receives as an argument.
+     * "isNearlyEqualTo" checks that the float is approximately equal to the
+     * value received as an argument.
      *
      * Indeed, in computer science, decimal numbers are managed in a way that
      * does not allow for accurate comparisons without the use of specialized

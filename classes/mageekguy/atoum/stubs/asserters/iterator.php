@@ -2,8 +2,6 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
 class iterator extends object
 {
     /**

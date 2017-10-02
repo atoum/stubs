@@ -3,10 +3,10 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * This is the assertion dedicated to the booleans.
+ * This is the assertion dedicated to booleans.
  *
  * If you try to test a variable that is not a boolean with this
- * assertion, this will fail.
+ * assertion, it will fail.
  *
  * Note: "null" is not a boolean. Report the the PHP manual to know
  *   what is_bool considers or not to be a boolean.

@@ -4,9 +4,11 @@
 
 return [
 	'classes/mageekguy/atoum/stubs/asserters/' => [
+		'asserter.php',
 		'variable.php',
 		'boolean.php',
 		'object.php',
+		'phpObject.php',
 		'dateInterval.php',
 		'dateTime.php',
 		'error.php',
@@ -25,12 +27,11 @@ return [
 		'stream.php',
 		'utf8String.php',
 		'output.php',
-		'generator.php',
 		'iterator.php',
+		'generator.php',
 		'castToArray.php',
 		'testedClass.php',
 		'phpResource.php',
-		'phpObject.php',
 		'phpFunction.php',
 		'extension.php',
 		'constant.php',

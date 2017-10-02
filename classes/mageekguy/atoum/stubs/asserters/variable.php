@@ -2,17 +2,13 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
 /**
  * It's the basic assertion of all variables. It contains the necessary
  * tests for any type of variable.
  *
  */
-class variable
+class variable extends asserter
 {
-    use asserters;
-
     /**
      * "isNotFalse" check that the variable is strictly not equal to "false".
      *
@@ -93,7 +89,7 @@ class variable
     public $isNull;
 
     /**
-     * "isEqualTo" verifies that the variable is equal to a given data.
+     * "isEqualTo" verifies that the variable is equal to a given value.
      *
      *    <?php
      *    $a = 'a';
@@ -103,7 +99,7 @@ class variable
      *            ->isEqualTo('a')    // passes
      *    ;
      *
-     *      also to check the type, use *isIdenticalTo*.
+     *      want to check the type, use isIdenticalTo.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -115,8 +111,8 @@ class variable
     public function isEqualTo($value, $failMessage = null) {}
 
     /**
-     * "isNotEqualTo" checks that the variable is not the same value the the
-     * given one.
+     * "isNotEqualTo" checks that the variable does not have the same value
+     * as the given one.
      *
      *    <?php
      *    $a       = 'a';
@@ -128,10 +124,10 @@ class variable
      *            ->isNotEqualTo('a')     // fails
      *
      *        ->variable($aString)
-     *            ->isNotEqualTo($1)      // fails
+     *            ->isNotEqualTo($a)      // fails
      *    ;
      *
-     *      want also to check the type, use *isNotIdenticalTo*.
+     *      also want to check the type, use isNotIdenticalTo.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -144,9 +140,8 @@ class variable
 
     /**
      * "isIdenticalTo" checks that the variable has the same value and the
-     * same type than the given data. Inthe case of an object,
-     * "isIdenticalTo" checks that the data is referencing on the same
-     * instance.
+     * same type than the given data. In the case of an object,
+     * "isIdenticalTo" checks that the data is referencing the same instance.
      *
      *    <?php
      *    $a = '1';
@@ -166,7 +161,7 @@ class variable
      *            ->isIdenticalTo(stdClass2)  // fails
      *    ;
      *
-     *      want its type, use *isEqualTo*.
+     *      want to check its type, use isEqualTo.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -178,11 +173,11 @@ class variable
     public function isIdenticalTo($value, $failMessage = null) {}
 
     /**
-     * "isNotIdenticalTo" checks that the variable hasn't the same type nor
-     * the same value than the given one.
+     * "isNotIdenticalTo" checks that the variable does not have the same
+     * type nor the same value than the given one.
      *
-     * Inthe case of an object, "isNotIdenticalTo" checks that the data isn't
-     * referencing on the same instance.
+     * In the case of an object, "isNotIdenticalTo" checks that the data
+     * isn't referencing on the same instance.
      *
      *    <?php
      *    $a = '1';
@@ -202,7 +197,7 @@ class variable
      *            ->isNotIdenticalTo(stdClass3)   // fails
      *    ;
      *
-     *      doesn't want to check its type, use *isNotEqualTo*.
+     *      want to check its type, use isNotEqualTo.
      *
      * @param mixed  $value
      * @param string $failMessage

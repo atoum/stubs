@@ -9,9 +9,9 @@ class adapter
     use asserters;
 
     /**
-     * "call" let you specify which method of the mock to check, his call
-     * must be followed by a call to one of the following verification method
-     * like atLeastOnce, once/twice/thrice, exactly, etc...
+     * "call" let you specify which method of mock to check, it call must be
+     * followed by a call to one of the following verification method like
+     * atLeastOnce, once/twice/thrice, exactly, etc...
      *
      *    <?php
      *
@@ -104,8 +104,8 @@ class adapter
     public function after(self $call) {}
 
     /**
-     * This asserters check that the tested method (see *call*) from the
-     * tested mock has been called exactly:
+     * This asserters check that the tested method (see call) from the tested
+     * mock has been called exactly:
      *
      * * once
      *
@@ -129,8 +129,7 @@ class adapter
      *    ;
      *
      * Note: "once", "twice" and "thrice" are respectively equivalent to
-     *   "exactly(1)", ":ref:`exactly <exactly-
-     *   anchor>`(2)" and "exactly(3)".
+     *   exactly(1), exactly(2) and exactly(3).
      *
      * @param string $failMessage
      *
@@ -139,8 +138,8 @@ class adapter
     public function once($failMessage = null) {}
 
     /**
-     * This asserters check that the tested method (see *call*) from the
-     * tested mock has been called exactly:
+     * This asserters check that the tested method (see call) from the tested
+     * mock has been called exactly:
      *
      * * once
      *
@@ -164,8 +163,7 @@ class adapter
      *    ;
      *
      * Note: "once", "twice" and "thrice" are respectively equivalent to
-     *   "exactly(1)", ":ref:`exactly <exactly-
-     *   anchor>`(2)" and "exactly(3)".
+     *   exactly(1), exactly(2) and exactly(3).
      *
      * @param string $failMessage
      *
@@ -174,8 +172,8 @@ class adapter
     public function twice($failMessage = null) {}
 
     /**
-     * This asserters check that the tested method (see *call*) from the
-     * tested mock has been called exactly:
+     * This asserters check that the tested method (see call) from the tested
+     * mock has been called exactly:
      *
      * * once
      *
@@ -199,8 +197,7 @@ class adapter
      *    ;
      *
      * Note: "once", "twice" and "thrice" are respectively equivalent to
-     *   "exactly(1)", ":ref:`exactly <exactly-
-     *   anchor>`(2)" and "exactly(3)".
+     *   exactly(1), exactly(2) and exactly(3).
      *
      * @param string $failMessage
      *
@@ -209,7 +206,7 @@ class adapter
     public function thrice($failMessage = null) {}
 
     /**
-     * "atLeastOnce" check that the tested method (see *call*) from the mock
+     * "atLeastOnce" check that the tested method (see call) from the mock
      * has been called at least once.
      *
      *    <?php
@@ -230,7 +227,7 @@ class adapter
     public function atLeastOnce($failMessage = null) {}
 
     /**
-     * "exactly" check that the tested method (see *call*) has been called a
+     * "exactly" check that the tested method (see call) has been called a
      * specific number of times.
      *
      *    <?php
@@ -244,6 +241,8 @@ class adapter
      *                ->exactly(2)
      *    ;
      *
+     * Note: You can have a simplified version with "->{2}".
+     *
      * @param integer $number
      * @param string  $failMessage
      *
@@ -252,8 +251,7 @@ class adapter
     public function exactly($number, $failMessage = null) {}
 
     /**
-     * "never" check that the tested method (see *call*) has never been
-     * called.
+     * "never" check that the tested method (see call) has never been called.
      *
      *    <?php
      *    $mock = new \mock\MyFirstClass;
@@ -266,7 +264,7 @@ class adapter
      *                ->never()
      *    ;
      *
-     * Note: "never" is equivalent to "exactly(0)".
+     * Note: "never" is equivalent to exactly(0).
      *
      * @param string $failMessage
      *
@@ -276,7 +274,7 @@ class adapter
 
     /**
      * "withArguments" let you specify the expected arguments that the tested
-     * method should receive when called (see *call*).
+     * method should receive when called (see call).
      *
      *    <?php
      *    $mock = new \mock\MyFirstClass;
@@ -289,7 +287,7 @@ class adapter
      *                ->withArguments('first', 'second')->once()
      *    ;
      *
-     *      also want to check the type, use *withIdenticalArguments*.
+     *      also want to check the type, use withIdenticalArguments.
      *
      * @param mixed ...$arguments
      *
@@ -298,8 +296,8 @@ class adapter
     public function withArguments(...$arguments) {}
 
     /**
-     * "withIdenticalArguments" let you specify the expected arguments that
-     * tested method should receive when called (see *call*).
+     * "withIdenticalArguments" let you specify the expected typed arguments
+     * that tested method should receive when called (see call).
      *
      *    <?php
      *    $mock = new \mock\MyFirstClass;
@@ -312,7 +310,7 @@ class adapter
      *                ->withIdenticalArguments('first', 'second')->once()
      *    ;
      *
-     *         If you do not want to check the type, use *withArguments*.
+     *         If you do not want to check the type, use withArguments.
      *
      * @param mixed ...$arguments
      *
@@ -322,7 +320,7 @@ class adapter
 
     /**
      * "withAtLeastArguments" let you specify the minimum expected arguments
-     * that tested method should receive when called (see *call*).
+     * that tested method should receive when called (see call).
      *
      *    <?php
      *    $this
@@ -336,7 +334,7 @@ class adapter
      *    ;
      *
      *      If you also want to check the type, use
-     *      *withAtLeastIdenticalArguments*.
+     *      withAtLeastIdenticalArguments.
      *
      * @param mixed[] $arguments
      *
@@ -346,7 +344,8 @@ class adapter
 
     /**
      * "withAtLeastIdenticalArguments" let you specify the minimum expected
-     * arguments that tested method should receive when called (see *call*).
+     * typed arguments that tested method should receive when called (see
+     * call).
      *
      *    <?php
      *    $this
@@ -359,7 +358,7 @@ class adapter
      *            ->withAtLeastIdenticalArguments(array('1'))->once() //fails
      *    ;
      *
-     *         If you do not want to check the type, use *withIdenticalArguments*.
+     *      If you do not want to check the type, use withIdenticalArguments.
      *
      * @param mixed[] $arguments
      *
@@ -369,10 +368,10 @@ class adapter
 
     /**
      * "withAnyArguments" allow to check any argument, non-specified, when we
-     * call the tested method (see *call*) of the tested mock.
+     * call the tested method (see call) of tested mock.
      *
-     * This method is useful to reset the arguments of the tested method,
-     * like in the following example:
+     * This method is useful to reset the arguments of tested method, like in
+     * the following example:
      *
      *    <?php
      *    $mock = new \mock\MyFirstClass;
@@ -393,7 +392,7 @@ class adapter
 
     /**
      * "withoutAnyArgument" lets you indicate that the method should not
-     * receive any argument when called (see *call*).
+     * receive any argument when called (see call).
      *
      *    <?php
      *    $this
@@ -409,7 +408,7 @@ class adapter
      *    ;
      *
      * Note: "withoutAnyArgument" is equivalent to call
-     *   *withAtLeastArguments* with an empty array:
+     *   withAtLeastArguments with an empty array:
      *   "->withAtLeastArguments(array())".
      *
      * @return $this
