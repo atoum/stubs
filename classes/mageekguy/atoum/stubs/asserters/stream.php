@@ -13,6 +13,7 @@ namespace mageekguy\atoum\stubs\asserters;
  * accessible via the "getPath" method on the stream controller
  * (something like "atoum://mockUniqId").
  *
+ * @method isWritten isWrited($failMessage)
  */
 class stream extends asserter
 {
@@ -47,16 +48,6 @@ class stream extends asserter
      * @return $this
      */
     public function isRead($failMessage = null) {}
-
-    /**
-     * Hint: "isWrited" is an alias to the "isWritten" method. For more
-     *   information, refer to the documentation of stream::isWritten
-     *
-     * @param string $failMessage
-     *
-     * @return $this
-     */
-    public function isWrited($failMessage = null) {}
 
     /**
      * "isWritten" checks if a mocked stream has been written.

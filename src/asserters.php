@@ -7,7 +7,6 @@ return [
 		'asserter.php',
 		'variable.php',
 		'boolean.php',
-		'object.php',
 		'phpObject.php',
 		'dateInterval.php',
 		'dateTime.php',

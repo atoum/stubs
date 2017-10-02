@@ -2,12 +2,8 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
-class extension
+class extension extends asserter
 {
-    use asserters;
-
     /**
      * Check if the extension is loaded (installed and enabled).
      *

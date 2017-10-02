@@ -35,7 +35,7 @@ namespace mageekguy\atoum\stubs\asserters;
  *    $this->exception->hasMessage('erreur'); // passes
  *
  */
-class exception extends object
+class exception extends phpObject
 {
     /**
      * "hasDefaultCode" checks that exception code is the default value, 0.

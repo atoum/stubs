@@ -20,6 +20,26 @@ class phpObject extends variable
 	public $toArray;
 
 	/**
+	 * @var $this
+	 */
+	public $isInstanceOfTestedClass;
+
+	/**
+	 * @var $this
+	 */
+	public $isNotTestedInstance;
+
+	/**
+	 * @var $this
+	 */
+	public $isTestedInstance;
+
+	/**
+	 * @var castToString
+	 */
+	public $toString;
+
+	/**
 	 * "isInstanceOf" checks that an object is:
 	 *
 	 * * an instance of the given class,

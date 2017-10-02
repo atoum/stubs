@@ -505,7 +505,7 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed $offset
      *
-     * @return atoum\asserter
+     * @return asserter
      */
     public function offsetGet($offset) {}
 

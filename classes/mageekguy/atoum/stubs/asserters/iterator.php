@@ -2,7 +2,7 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-class iterator extends object
+class iterator extends phpObject
 {
     /**
      * @var \mageekguy\atoum\stubs\asserters\integer

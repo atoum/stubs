@@ -9,7 +9,7 @@ namespace mageekguy\atoum\stubs\asserters;
  * with this assertion it will fail.
  *
  */
-class dateTime extends object
+class dateTime extends phpObject
 {
     /**
      * @var static

@@ -153,7 +153,9 @@ class phpString extends variable
      *
      * @return $this
      */
-    public function matches($pattern, $failMessage = null) {}
+	public function matches($pattern, $failMessage = null) {}
+
+	public function notMatches($pattern, $failMessage = null) {}
 
     /**
      * "isEqualToContentsOfFile" checks that the string is equal to the

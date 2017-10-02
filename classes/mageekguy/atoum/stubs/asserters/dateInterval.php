@@ -9,8 +9,25 @@ namespace mageekguy\atoum\stubs\asserters;
  * class) with this assertion it will fail.
  *
  */
-class dateInterval extends object
+class dateInterval extends phpObject
 {
+	/**
+	 * "isZero" check the duration of "DateInterval" is equal to 0.
+	 *
+	 *    <?php
+	 *    $di1 = new DateInterval('P0D');
+	 *    $di2 = new DateInterval('P1D');
+	 *
+	 *    $this
+	 *        ->dateInterval($di1)
+	 *            ->isZero()      // passes
+	 *        ->dateInterval($di2)
+	 *            ->isZero()      // fails
+	 *    ;
+	 * @return $this
+	 */
+	public $isZero;
+
     /**
      * "isGreaterThan" checks that the duration of the object  "DateInterval"
      * is higher to the duration of the given "DateInterval" object.
@@ -123,4 +140,27 @@ class dateInterval extends object
      */
     public function isLessThanOrEqualTo(\dateInterval $interval, $failMessage = null) {}
 
+    /**
+     * "isEqualTo" checks that the duration of object "DateInterval" is
+     * equals to to the duration of another "DateInterval" object.
+     *
+     *    <?php
+     *    $di = new DateInterval('P1D');
+     *
+     *    $this
+     *        ->dateInterval($di)
+     *            ->isEqualTo(                // passes
+     *                new DateInterval('P1D')
+     *            )
+     *            ->isEqualTo(                // fails
+     *                new DateInterval('P2D')
+     *            )
+     *    ;
+     */
+	public function isEqualTo($value, $failMessage = null) {}
+
+	/**
+	 * @return $this
+	 */
+	public function	isZero($failMessage = null) {}
 }
