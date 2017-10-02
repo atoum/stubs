@@ -226,4 +226,34 @@ class atoum extends mageekguy\atoum\test
      * @return object
      */
     public function newMockInstance($class, $mockNamespace = null, $mockClass = null, array $constructorArguments = null) {}
+
+	/**
+	 * Allow to initialize the execution environment of the individual tests for all test method of the class.
+	 *
+	 * @param string $method
+	 *
+	 * @see http://docs.atoum.org/en/latest/fine_tuning.html#the-initialization-methods
+	 */
+    public function beforeTestMethod($method) {}
+
+	/**
+	 * Allow to clean up the execution environment of the individual tests for all test method of the class.
+	 *
+	 * @param string $method
+	 *
+	 * @see http://docs.atoum.org/en/latest/fine_tuning.html#the-initialization-methods
+	 */
+	public function afterTestMethod($method) {}
+
+	/**
+	 * Executed *before all* tests methods, so it's run once
+	 * @see http://docs.atoum.org/en/latest/fine_tuning.html#the-initialization-methods
+	 */
+	public function setUp() {}
+
+	/**
+	 * Executed once all the test of the class have been processed
+	 * @see http://docs.atoum.org/en/latest/fine_tuning.html#the-initialization-methods
+	 */
+	public function tearDown() {}
 }
