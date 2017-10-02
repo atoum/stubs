@@ -69,7 +69,7 @@ class generator extends iterator
      * checks that the generator returns a integer with a value of 42 (just
      * like a call to the yields assertion, you can use any asserter to check
      * to returned value).
-	 *
+     *
 	 * @return asserter
      */
 	public $returns;

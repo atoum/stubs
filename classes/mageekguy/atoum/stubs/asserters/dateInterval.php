@@ -12,18 +12,19 @@ namespace mageekguy\atoum\stubs\asserters;
 class dateInterval extends phpObject
 {
 	/**
-	 * "isZero" check the duration of "DateInterval" is equal to 0.
-	 *
-	 *    <?php
-	 *    $di1 = new DateInterval('P0D');
-	 *    $di2 = new DateInterval('P1D');
-	 *
-	 *    $this
-	 *        ->dateInterval($di1)
-	 *            ->isZero()      // passes
-	 *        ->dateInterval($di2)
-	 *            ->isZero()      // fails
-	 *    ;
+     * "isZero" check the duration of "DateInterval" is equal to 0.
+     *
+     *    <?php
+     *    $di1 = new DateInterval('P0D');
+     *    $di2 = new DateInterval('P1D');
+     *
+     *    $this
+     *        ->dateInterval($di1)
+     *            ->isZero()      // passes
+     *        ->dateInterval($di2)
+     *            ->isZero()      // fails
+     *    ;
+     *
 	 * @return $this
 	 */
 	public $isZero;
@@ -156,6 +157,7 @@ class dateInterval extends phpObject
      *                new DateInterval('P2D')
      *            )
      *    ;
+     *
      */
 	public function isEqualTo($value, $failMessage = null) {}
 
