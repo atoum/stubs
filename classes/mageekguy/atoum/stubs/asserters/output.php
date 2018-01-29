@@ -3,7 +3,7 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * It's the assertion dedicated to tests on outputs, so everything wich
+ * It's the assertion dedicated to tests on outputs, so everything witch
  * supposed to be displayed on the screen.
  *
  *    <?php

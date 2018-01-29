@@ -2,10 +2,8 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
 /**
- * It's assertion dedicated to errors.
+ * It's the assertion dedicated to errors.
  *
  *    <?php
  *    $this
@@ -27,10 +25,8 @@ use mageekguy\atoum\stubs\asserters;
  *   E_STRICT can't be managed with this function.
  *
  */
-class error
+class error extends asserter
 {
-    use asserters;
-
     /**
      * "exists" checks that an error was raised during the execution of the
      * previous code.
@@ -61,7 +57,7 @@ class error
     public $exists;
 
     /**
-     * "notExists" checks that an error was raised during the execution of
+     * "notExists" checks that no errors was raised during the execution of
      * the previous code.
      *
      *    <?php
@@ -92,8 +88,8 @@ class error
     /**
      * "withAnyType" does not check the type of the raised error. That's the
      * default behaviour. So "->error()->withAnyType()->exists()" is the
-     * equivalent of "->error()->exists()". This method is here if you want
-     * to add semantic to your test.
+     * equivalent of "->error()->exists()". This method allow to add semantic
+     * to your test.
      *
      *    <?php
      *    $this
@@ -121,8 +117,8 @@ class error
     /**
      * "withAnyMessage" does not check the error message. That's the default
      * behaviour. So "->error()->withAnyMessage()->exists()" is the
-     * equivalent of "->error()->exists()". This method is here if you want
-     * to add semantic to your test.
+     * equivalent of "->error()->exists()". This method allow to add semantic
+     * to your test.
      *
      *    <?php
      *    $this
@@ -191,7 +187,7 @@ class error
     public function exists() {}
 
     /**
-     * "notExists" checks that an error was raised during the execution of
+     * "notExists" checks that no errors was raised during the execution of
      * the previous code.
      *
      *    <?php
@@ -239,7 +235,7 @@ class error
      *            }
      *        )
      *        ->error()
-     *            ->withType(E_USER_WARNING)  // fails
+     *            ->withType(E_USER_WARNING)  // failed
      *            ->exists()
      *    ;
      *
@@ -254,8 +250,8 @@ class error
     /**
      * "withAnyType" does not check the type of the raised error. That's the
      * default behaviour. So "->error()->withAnyType()->exists()" is the
-     * equivalent of "->error()->exists()". This method is here if you want
-     * to add semantic to your test.
+     * equivalent of "->error()->exists()". This method allow to add semantic
+     * to your test.
      *
      *    <?php
      *    $this
@@ -281,7 +277,7 @@ class error
     public function withAnyType() {}
 
     /**
-     * "withMessage" checks the message content of the raised error.
+     * "withMessage" checks message content of raised error.
      *
      *    <?php
      *    $this
@@ -313,6 +309,32 @@ class error
     public function withMessage($message) {}
 
     /**
+     * "withPattern" checks message content of raised error against a regular
+     * expression.
+     *
+     *    <?php
+     *    $this
+     *        ->when(
+     *            function() {
+     *                trigger_error('message');
+     *            }
+     *        )
+     *        ->error()
+     *            ->withPattern('/^mess.*$/')
+     *            ->exists() // passes
+     *    ;
+     *
+     *    $this
+     *        ->when(
+     *            function() {
+     *                trigger_error('message');
+     *            }
+     *        )
+     *        ->error()
+     *            ->withPattern('/^mess$/')
+     *            ->exists() // fails
+     *    ;
+     *
      * @param string $pattern
      *
      * @return $this
@@ -322,8 +344,8 @@ class error
     /**
      * "withAnyMessage" does not check the error message. That's the default
      * behaviour. So "->error()->withAnyMessage()->exists()" is the
-     * equivalent of "->error()->exists()". This method is here if you want
-     * to add semantic to your test.
+     * equivalent of "->error()->exists()". This method allow to add semantic
+     * to your test.
      *
      *    <?php
      *    $this

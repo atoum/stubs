@@ -12,8 +12,8 @@ use
  *
  * Note: "array" is a reserved word in PHP, it hasn't been possible to
  *   create an "array" assertion. It's therefore called "phpArray" and an
- *   alias "array" was created. S, you can meet both "->phpArray()" or
- *   "->array()".
+ *   alias "array" was created. So, you can meet either``->phpArray()``
+ *   or "->array()".
  *
  * It's recommended to use only "->array()" in order to simplify the
  * reading of tests.
@@ -150,7 +150,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "strictlyContains" doesn't search recursively.
      *
-     *      to check the type, use *contains*.
+     *      check the type, use contains.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -177,7 +177,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "contains" doesn't check recursively.
      *
-     *      to check its type, use *strictlyContains*.
+     *      check its type, use strictlyContains.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -205,7 +205,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "strictlyNotContains" doesn't search recursively.
      *
-     *      want to check the type, use *contains*.
+     *      check the type, use contains.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -217,7 +217,7 @@ class phpArray extends variable implements \arrayAccess
     public function strictlyNotContains($value, $failMessage = null) {}
 
     /**
-     * "notContains" checks that an array doesn't contains the given data.
+     * "notContains" checks that an array doesn't contains a given data.
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -231,7 +231,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "notContains" doesn't search recursively.
      *
-     *      also to check its type, use *strictlyNotContains*.
+     *      to check its type, use strictlyNotContains.
      *
      * @param mixed  $value
      * @param string $failMessage
@@ -243,7 +243,7 @@ class phpArray extends variable implements \arrayAccess
     public function notContains($value, $failMessage = null) {}
 
     /**
-     * "hasKeys" checks that an array contains all the given keys.
+     * "hasKeys" checks that an array contains all given keys.
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -266,7 +266,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "hasKeys" doesn't search recursively.
      *
-     * Warning: "hasKeys" doesn't test the type of keys.
+     * Warning: "hasKeys" doesn't test the keys type.
      *
      * @param mixed[] $keys
      * @param string  $failMessage
@@ -278,7 +278,7 @@ class phpArray extends variable implements \arrayAccess
     public function hasKeys(array $keys, $failMessage = null) {}
 
     /**
-     * "notHasKeys" checks that an array doesn't contains any keys from the
+     * "notHasKeys" checks that an array doesn't contains any keys from a
      * given array.
      *
      *    <?php
@@ -302,7 +302,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "notHasKeys" doesn't search recursively.
      *
-     * Warning: "notHasKeys" doesn't test the type of keys.
+     * Warning: "notHasKeys" doesn't test keys type.
      *
      * @param mixed[] $keys
      * @param string  $failMessage
@@ -337,7 +337,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "hasKey" doesn't search recursively.
      *
-     * Warning: "hasKey" doesn't test the type of keys.
+     * Warning: "hasKey" doesn't test the key type.
      *
      * @param mixed  $key
      * @param string $failMessage
@@ -372,7 +372,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "notHasKey" doesn't search recursively.
      *
-     * Warning: "notHasKey" doesn't test the type of keys.
+     * Warning: "notHasKey" doesn't test keys type.
      *
      * @param mixed  $key
      * @param string $failMessage
@@ -384,8 +384,8 @@ class phpArray extends variable implements \arrayAccess
     public function notHasKey($key, $failMessage = null) {}
 
     /**
-     * "containsValues" checks that an array contains all data in from the
-     * given array.
+     * "containsValues" checks that an array contains all data from a given
+     * array.
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -399,7 +399,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "containsValues" doesn't search recursively.
      *
-     *      also want to check their types, use *strictlyContainsValues*.
+     *      to check their types, use strictlyContainsValues.
      *
      * @param mixed[] $values
      * @param string  $failMessage
@@ -411,8 +411,8 @@ class phpArray extends variable implements \arrayAccess
     public function containsValues(array $values, $failMessage = null) {}
 
     /**
-     * "strictlyContainsValues" checks that an array contains all the given
-     * data (same value and same type).
+     * "strictlyContainsValues" checks that an array contains all given data
+     * (same value and same type).
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -428,7 +428,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "strictlyContainsValue" doesn't search recursively.
      *
-     *      don't want to check the types, use *containsValues*.
+     *      to check the types, use containsValues.
      *
      * @param mixed[] $values
      * @param string  $failMessage
@@ -441,7 +441,7 @@ class phpArray extends variable implements \arrayAccess
 
     /**
      * "notContainsValues" checks that an array doesn't contains any data
-     * from the given array.
+     * from a given array.
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -455,7 +455,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "notContainsValues" doesn't search recursively.
      *
-     *      also want to check their types, use *strictlyNotContainsValues*.
+     *      also want to check their types, use strictlyNotContainsValues.
      *
      * @param mixed[] $values
      * @param string  $failMessage
@@ -468,7 +468,7 @@ class phpArray extends variable implements \arrayAccess
 
     /**
      * "strictlyNotContainsValues" checks that an array doesn't contains any
-     * of the given data (same value and same type).
+     * of given data (same value and same type).
      *
      *    <?php
      *    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
@@ -484,7 +484,7 @@ class phpArray extends variable implements \arrayAccess
      *
      * Note: "strictlyNotContainsValues" doesn't search recursively.
      *
-     *      don't want to check the types, use *notContainsValues*.
+     *      want to check the types, use notContainsValues.
      *
      * @param mixed[] $values
      * @param string  $failMessage
@@ -505,7 +505,7 @@ class phpArray extends variable implements \arrayAccess
     /**
      * @param mixed $offset
      *
-     * @return atoum\asserter
+     * @return asserter
      */
     public function offsetGet($offset) {}
 

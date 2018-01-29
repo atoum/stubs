@@ -1,0 +1,52 @@
+#!/usr/bin/env php
+<?php
+
+//
+// this scripts add missing stubs files
+//
+
+include_once __DIR__ . '/../src/functions.php';
+
+$asserters = include __DIR__ . '/../src/asserters.php';
+
+$pathToAtoumCore = readline('Path to atoum core?');
+if (!file_exists($pathToAtoumCore))
+{
+	echo 'Directory ', $pathToAtoumCore, ' doesn\'t exist.', PHP_EOL;
+	exit(2);
+}
+
+// look at missing files, comparing with existing asserters
+$iterator = new DirectoryIterator($pathToAtoumCore . '/classes/asserters/');
+
+$asserterClasses = array();
+foreach ($asserters as $pathToAsserter => $assertersInPath)
+{
+	foreach ($assertersInPath as $asserter)
+	{
+		$asserterClasses[] = $asserter;
+	}
+}
+
+$missing = array();
+foreach ($iterator as $file)
+{
+	if (!$file->isFile())
+	{
+		continue;
+	}
+
+	if (!in_array($file->getFilename(), $asserterClasses))
+	{
+		$missing[] = $file->getFilename();
+	}
+}
+
+// build missing classes
+foreach ($missing as $missingAsserterClass)
+{
+	$path = createNewStubClass(str_replace('.php', '', $missingAsserterClass), 'mageekguy\\atoum\\stubs\\asserters');
+	echo 'Edit file at "', $path, '". Don\'t forget to update src/asserters.php', PHP_EOL;
+}
+
+echo 'Ended \o/';

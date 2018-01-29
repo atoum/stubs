@@ -9,11 +9,11 @@ namespace mageekguy\atoum\stubs\asserters;
 class phpString extends variable
 {
     /**
-     * "length" allows you to get an asserter of type *integer* that contains
+     * "length" allows you to get an asserter of type integer that contains
      * the string's size.
      *
      *    <?php
-     *    $string = 'atoum'
+     *    $string = 'atoum';
      *
      *    $this
      *        ->string($string)
@@ -28,7 +28,7 @@ class phpString extends variable
     public $length;
 
     /**
-     * "isEmpty" checks that a string is empty.
+     * "isEmpty" checks that the string is empty.
      *
      *    <?php
      *    $emptyString    = '';
@@ -75,7 +75,7 @@ class phpString extends variable
     public $toArray;
 
     /**
-     * "isEmpty" checks that a string is empty.
+     * "isEmpty" checks that the string is empty.
      *
      *    <?php
      *    $emptyString    = '';
@@ -122,7 +122,7 @@ class phpString extends variable
 
     /**
      * Hint: "match" is an alias of the "matches" method. For more
-     *   information, refer to the documentation of  *string::matches*
+     *   information, refer to the documentation of string::matches
      *
      * @param string $pattern
      * @param string $failMessage
@@ -132,7 +132,7 @@ class phpString extends variable
     public function match($pattern, $failMessage = null) {}
 
     /**
-     * "matches" checks that a regular expression match the string.
+     * "matches" checks that a regular expression match the tested string.
      *
      *    <?php
      *    $phone = '0102030405';
@@ -153,11 +153,13 @@ class phpString extends variable
      *
      * @return $this
      */
-    public function matches($pattern, $failMessage = null) {}
+	public function matches($pattern, $failMessage = null) {}
+
+	public function notMatches($pattern, $failMessage = null) {}
 
     /**
-     * "isEqualToContentsOfFile" checks that a string is equal to the content
-     * of a file given by its path.
+     * "isEqualToContentsOfFile" checks that the string is equal to the
+     * content of a file given by its path.
      *
      *    <?php
      *    $this
@@ -177,7 +179,7 @@ class phpString extends variable
     public function isEqualToContentsOfFile($path, $failMessage = null) {}
 
     /**
-     * "hasLength" checks the size of the string.
+     * "hasLength" checks the string size.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -198,8 +200,8 @@ class phpString extends variable
     public function hasLength($length, $failMessage = null) {}
 
     /**
-     * "hasLengthGreaterThan" checks that the size of a string is grater that
-     * the given one.
+     * "hasLengthGreaterThan" checks that the string size is greater that the
+     * given one.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -220,8 +222,8 @@ class phpString extends variable
     public function hasLengthGreaterThan($length, $failMessage = null) {}
 
     /**
-     * "hasLengthLessThan" checks that the size of the string is shorter that
-     * the given one.
+     * "hasLengthLessThan" checks that the string size is lower that the
+     * given one.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -242,7 +244,7 @@ class phpString extends variable
     public function hasLengthLessThan($length, $failMessage = null) {}
 
     /**
-     * "contains" checks that a string contains a given string.
+     * "contains" checks that a string contains another given string.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -264,7 +266,7 @@ class phpString extends variable
     public function contains($fragment, $failMessage = null) {}
 
     /**
-     * "notContains" checks that a string doesn't contains another given
+     * "notContains" checks that the tested string doesn't contains another
      * string.
      *
      *    <?php
@@ -288,7 +290,7 @@ class phpString extends variable
     public function notContains($fragment, $failMessage = null) {}
 
     /**
-     * "startWith" checks that a string starts with another given string.
+     * "startWith" checks that the tested string starts with another string.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -310,8 +312,8 @@ class phpString extends variable
     public function startWith($fragment, $failMessage = null) {}
 
     /**
-     * "notStartWith" checks that a string doesn't starts with another given
-     * string.
+     * "notStartWith" checks that the tested string doesn't starts with
+     * another string.
      *
      *    <?php
      *    $string = 'Hello world';
@@ -353,7 +355,7 @@ class phpString extends variable
     public function endWith($fragment, $failMessage = null) {}
 
     /**
-     * "notEndWith" checks that a string doesn't ends with another given
+     * "notEndWith" checks that the tested string doesn't ends with another
      * string.
      *
      *    <?php

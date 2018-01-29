@@ -6,7 +6,7 @@ namespace mageekguy\atoum\stubs\asserters;
  * It's the assertion dedicated to integers.
  *
  * If you try to test a variable that is not an integer with this
- * assertion, this will fail.
+ * assertion, it will fail.
  *
  * Note: "null" isn't an integer. Refer to the PHP's manual  is_int to
  *   known what's considered as an integer or not.
@@ -63,8 +63,8 @@ class integer extends variable
     public function isZero($failMessage = null) {}
 
     /**
-     * "isGreaterThan" checks that the integer is strictly higher than the
-     * given one.
+     * "isGreaterThan" checks that the integer is strictly higher than given
+     * one.
      *
      *    <?php
      *    $zero = 0;

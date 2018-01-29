@@ -10,8 +10,8 @@ namespace mageekguy\atoum\stubs\asserters;
 class hash extends phpString
 {
     /**
-     * "isSha1" checks that the string is a "sha1" format, i.e. a
-     * hexadecimale string of 40 length.
+     * "isSha1" checks that the string is a "sha1" format, i.e. a hexadecimal
+     * string of 40 length.
      *
      *    <?php
      *    $hash    = hash('sha1', 'atoum');
@@ -32,7 +32,7 @@ class hash extends phpString
 
     /**
      * "isSha256" checks that the string is a "sha256" format, i.e. a
-     * hexadecimale string of 64 length.
+     * hexadecimal string of 64 length.
      *
      *    <?php
      *    $hash    = hash('sha256', 'atoum');
@@ -53,7 +53,7 @@ class hash extends phpString
 
     /**
      * "isSha512" checks that the string is a "sha512" format, i.e. a
-     * hexadecimale string of 128 length.
+     * hexadecimal string of 128 length.
      *
      *    <?php
      *    $hash    = hash('sha512', 'atoum');
@@ -73,7 +73,7 @@ class hash extends phpString
     public $isSha512;
 
     /**
-     * "isMd5" checks that the string is a "md5" format, i.r. a hexadecimale
+     * "isMd5" checks that the string is a "md5" format, i.r. a hexadecimal
      * string of 32 length.
      *
      *    <?php
@@ -94,8 +94,8 @@ class hash extends phpString
     public $isMd5;
 
     /**
-     * "isSha1" checks that the string is a "sha1" format, i.e. a
-     * hexadecimale string of 40 length.
+     * "isSha1" checks that the string is a "sha1" format, i.e. a hexadecimal
+     * string of 40 length.
      *
      *    <?php
      *    $hash    = hash('sha1', 'atoum');
@@ -118,7 +118,7 @@ class hash extends phpString
 
     /**
      * "isSha256" checks that the string is a "sha256" format, i.e. a
-     * hexadecimale string of 64 length.
+     * hexadecimal string of 64 length.
      *
      *    <?php
      *    $hash    = hash('sha256', 'atoum');
@@ -141,7 +141,7 @@ class hash extends phpString
 
     /**
      * "isSha512" checks that the string is a "sha512" format, i.e. a
-     * hexadecimale string of 128 length.
+     * hexadecimal string of 128 length.
      *
      *    <?php
      *    $hash    = hash('sha512', 'atoum');
@@ -163,7 +163,7 @@ class hash extends phpString
     public function isSha512($failMessage = null) {}
 
     /**
-     * "isMd5" checks that the string is a "md5" format, i.r. a hexadecimale
+     * "isMd5" checks that the string is a "md5" format, i.r. a hexadecimal
      * string of 32 length.
      *
      *    <?php

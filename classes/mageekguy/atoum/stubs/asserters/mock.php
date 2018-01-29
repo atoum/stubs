@@ -3,7 +3,7 @@
 namespace mageekguy\atoum\stubs\asserters;
 
 /**
- * This is the asserter for mocks.
+ * It's the assertion dedicated to mocks.
  *
  *    <?php
  *    $mock = new \mock\MyClass;
@@ -12,19 +12,13 @@ namespace mageekguy\atoum\stubs\asserters;
  *        ->mock($mock)
  *    ;
  *
- * Note: Refer to the documentation on *mock* for more information on
- *   how to create and manage mocks.
+ * Note: Refer to the documentation of mock for more information on how
+ *   to create and manage mocks.
  *
+ * @method call receive($function)
  */
 class mock extends adapter
 {
-    /**
-     * @param string $function
-     *
-     * @return $this
-     */
-    public function receive($function) {}
-
     /**
      * "wasCalled" checks that at least one method of the mock has been
      * called at least once.

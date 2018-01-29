@@ -67,6 +67,19 @@ Because they are not all meaningful in a test context. When you write unit tests
 internal asserters' methods, even if they are public. They provide support for atoum so it can do its job well. But they
 won't help you in your everyday work.
 
+## Upgrade stubs
+
+```
+bin/updateMissingStubClasses
+bin/updateDoc
+```
+
+This will only update existing methods. To add new method you will require to do it manually!
+Think also to look at the tree of [asserters](http://docs.atoum.org/en/latest/asserters.html) to extends
+the class properly.
+
+You probably also need to update `classes/mageekguy/atoum/stubs/asserters.php` with the new asserter set.
+
 ## License
 
 atoum stubs are released under the BSD-3-Clause License. See the bundled LICENSE file for details.

@@ -2,8 +2,6 @@
 
 namespace mageekguy\atoum\stubs\asserters;
 
-use mageekguy\atoum\stubs\asserters;
-
 /**
  * It's the assertion dedicated to classes.
  *
@@ -18,18 +16,16 @@ use mageekguy\atoum\stubs\asserters;
  *
  * Note: The keyword "class" is a reserved word in PHP, it wasn't
  *   possible to create a "class" asserter. It's therefore called
- *   "phpClass" and an alias "class" has been created. You can meet both
- *   "->phpClass()" or "->class()".
+ *   "phpClass" and an alias "class" has been created. You can meet
+ *   either "->phpClass()" or "->class()".
  *
  * But it's recommended to only use "->class()".
  *
  * @method $this extends($class)
  * @method $this implements($interface)
  */
-class phpClass
+class phpClass extends variable
 {
-    use asserters;
-
     /**
      * "isAbstract" checks that the class is abstract.
      *
@@ -76,7 +72,7 @@ class phpClass
     public $isFinal;
 
     /**
-     * "hasNoParent" checks that the class doesn't  inherit from any class.
+     * "hasNoParent" checks that the class doesn't inherit from any class.
      *
      *    <?php
      *    $this
@@ -87,7 +83,7 @@ class phpClass
      *            ->hasNoParent()     // fails
      *    ;
      *
-     *      from no class. "hasNoParent" doesn't check interfaces, only the
+     *      inheritance. "hasNoParent" doesn't check interfaces, only the
      *      inherited classes.
      *
      * @var static
@@ -108,7 +104,7 @@ class phpClass
      *            ->hasParent()       // passes
      *    ;
      *
-     *      from no class. "hasParent" doesn't check interfaces, only the
+     *      inheritance. "hasParent" doesn't check interfaces, only the
      *      inherited classes.
      *
      * @param string $parent
@@ -121,7 +117,7 @@ class phpClass
     public function hasParent($parent, $failMessage = null) {}
 
     /**
-     * "hasNoParent" checks that the class doesn't  inherit from any class.
+     * "hasNoParent" checks that the class doesn't inherit from any class.
      *
      *    <?php
      *    $this
@@ -132,7 +128,7 @@ class phpClass
      *            ->hasNoParent()     // fails
      *    ;
      *
-     *      from no class. "hasNoParent" doesn't check interfaces, only the
+     *      inheritance. "hasNoParent" doesn't check interfaces, only the
      *      inherited classes.
      *
      * @param string $failMessage
@@ -145,7 +141,7 @@ class phpClass
     public function hasNoParent($failMessage = null) {}
 
     /**
-     * "isSubclassOf" checks that the class inherit from the given class.
+     * "isSubclassOf" checks that the tested class inherit from given class.
      *
      *    <?php
      *    $this

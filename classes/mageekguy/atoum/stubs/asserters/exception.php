@@ -35,11 +35,10 @@ namespace mageekguy\atoum\stubs\asserters;
  *    $this->exception->hasMessage('erreur'); // passes
  *
  */
-class exception extends object
+class exception extends phpObject
 {
     /**
-     * "hasDefaultCode" checks that the code of the exception is the default
-     * value, 0.
+     * "hasDefaultCode" checks that exception code is the default value, 0.
      *
      *    <?php
      *    $this
@@ -61,8 +60,8 @@ class exception extends object
     public $hasDefaultCode;
 
     /**
-     * "message" enables you to get an asserter of type *string* containing
-     * the message of the tested exception.
+     * "message" allow you to get an asserter of type string containing the
+     * tested exception message.
      *
      *    <?php
      *    $this
@@ -80,8 +79,7 @@ class exception extends object
     public $message;
 
     /**
-     * "hasDefaultCode" checks that the code of the exception is the default
-     * value, 0.
+     * "hasDefaultCode" checks that exception code is the default value, 0.
      *
      *    <?php
      *    $this
@@ -105,7 +103,7 @@ class exception extends object
     public function hasDefaultCode($failMessage = null) {}
 
     /**
-     * "hasCode" checks the code of the exception.
+     * "hasCode" checks exception code.
      *
      *    <?php
      *    $this
@@ -128,7 +126,7 @@ class exception extends object
     public function hasCode($code, $failMessage = null) {}
 
     /**
-     * "hasMessage" checks the message from the exception.
+     * "hasMessage" checks exception message.
      *
      *    <?php
      *    $this
@@ -153,8 +151,8 @@ class exception extends object
 
     /**
      * "hasNestedException" checks that the exception contains a reference to
-     * another exception. If the type of the exception is given, this will
-     * also checks the class of the exception.
+     * another exception. If the exception type is given, this will also
+     * checks the exception class.
      *
      *    <?php
      *    $this
