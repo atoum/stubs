@@ -225,7 +225,7 @@ class atoum extends mageekguy\atoum\test
      *
      * @return object
      */
-    public function newMockInstance($class, $mockNamespace = null, $mockClass = null, array $constructorArguments = null) {}
+    public function newMockInstance($class, $mockNamespace = null, $mockClass = null, ?array $constructorArguments = null) {}
 
 	/**
 	 * Allow to initialize the execution environment of the individual tests for all test method of the class.
