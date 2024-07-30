@@ -192,5 +192,5 @@ class exception extends phpObject
      *
      * @return $this
      */
-    public function hasNestedException(\exception $exception = null, $failMessage = null) {}
+    public function hasNestedException(?\exception $exception = null, $failMessage = null) {}
 }
