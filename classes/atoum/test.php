@@ -2,9 +2,15 @@
 
 namespace atoum;
 
-use mageekguy;
+use atoum\atoum;
 
-class test extends mageekguy\atoum
+/**
+ * @method $this and(...$mixed)
+ * @method $this as($alias)
+ * @method $this if(...$mixed)
+ * @method $this use($target)
+ */
+class test extends atoum
 {
 
 }
