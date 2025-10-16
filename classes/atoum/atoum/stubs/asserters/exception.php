@@ -1,6 +1,6 @@
 <?php
 
-namespace mageekguy\atoum\stubs\asserters;
+namespace atoum\atoum\stubs\asserters;
 
 /**
  * It's the assertion dedicated to exceptions.
